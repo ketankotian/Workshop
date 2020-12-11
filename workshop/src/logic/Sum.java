@@ -44,11 +44,11 @@ public class Sum {
 		System.out.println("sum using while loop : " + sum);
 	}
 
-	static int recuse(int arr[], int start, int len) {
-		if (start >= len) {
+	static int recuse(int arr[], int first, int len) {
+		if (first >= len) {
 			return 0;
 		} else {
-			return (arr[start] + recuse(arr, start + 1, len));
+			return (arr[first] + recuse(arr, first + 1, len));
 		}
 
 	}

@@ -14,22 +14,24 @@ public class LeapYear {
 		System.out.println("enter year : ");
 		int year = sc.nextInt();
 		int next = 20;
+		
+		checkYear(year, next);
 
+	}
+
+	static void checkYear(int year, int next) {
 		if (year % 400 == 0 || year % 4 == 0 && year % 100 != 0) {
 			System.out.println("Its Leap year ");
-			System.out.println("Next " +next+ " leap year : ");
-			
+			System.out.println("Next " + next + " leap year : ");
+
 			for (int i = 0; i < next; i++) {
 				year = year + 4;
-				System.out.print(year+" ; ");
+				System.out.print(year + " ; ");
 			}
-			
-		}
-		else 
-		{
+
+		} else {
 			System.out.println("Not a Laep Year");
 		}
 
 	}
-
 }

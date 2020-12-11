@@ -15,12 +15,16 @@ public class RockPaperSisor {
 	public static void main(String[] args) {
 
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Select 1.Rock , 2.Paper , 3.Sissor ");
+		System.out.println("Select option :  1.Rock , 2.Paper , 3.Sissor ");
 		int userChoice = sc.nextInt();
 
 		Random r = new Random();
 		int computerChoice = r.nextInt(3) + 1;
+		
+		gameplay(userChoice, computerChoice);
+	}
 
+	static void gameplay(int userChoice , int computerChoice) {
 		if (userChoice == computerChoice)
 			System.out.println("Its a tie !");
 
